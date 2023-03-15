@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite+Tailwind+Alpine</title>
+  </head>
+  <body>
+    <div class="h-screen flex items-center justify-center">
+			<div 
+				x-data="{
+					say: 'Vite+Tailwind+Alpine',
+				}"
+				class="flex flex-col items-center"
+			>
+				<h1 class="text-4xl mb-[30px]" x-text="say"></h1>
+				<button class="border-black border-[2px] py-2 px-4 hover:bg-slate-300" @click="say = 'Let\'s ave some'">But does it work?</button>
+			</div>
+		</div>
+		<script type="module" src="/main.js"></script>
+  </body>
+</html>
